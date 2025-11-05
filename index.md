@@ -13,13 +13,13 @@ title: Welcome!
   - My previous work includes elements of game theory, multi-agent risks, corrigibility, and active learning.
 
 - I'm also a committee member of *OAISI*, the [Oxford AI Safety Initiative](oaisi.org). I hope I can help build a welcoming, kind, and collaborative AI safety community here in Oxford.
-  - [Please chat with me](https://savvycal.com/oaisi/louis) if you want to talk about what AI safety is / what you might want to work on / how OAISI might be able to help you.
+  - [Please reach out](https://savvycal.com/oaisi/louis) if you want to talk about what AI safety is / what you might want to work on / how OAISI might be able to help you.
 
 - Aside from academic work, I'm pretty musical: I play bass in a couple bands, noodle on guitar and keys when writing my own music, and secretly would love to make a career out of playing music. Alternate career paths for me would also include teaching, for sure!
 
 - Some of my loves include \[video/tabletop\] games and puzzles of all kinds, Japanese food (part of my heritage), continental philosophy, Arsenal FC (COYG), and most of all my lovely fiancée :\)
 
-- *Shoot me an email if you want to talk* - I'm super responsive and I really enjoy talking to new people! Get in touch via louis\[at\]cbthomson\[dot\]com
+Shoot me an email if you want to talk - I'm quick to respond and I enjoy talking to new people! Get in touch via louis\[at\]cbthomson\[dot\]com
 
 ------------------------
 
