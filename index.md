@@ -1,5 +1,6 @@
 ---
 layout: default
+include: ["_includes/header.md"]
 ---
 
 # Welcome!
