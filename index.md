@@ -12,7 +12,7 @@ title: Welcome!
 - In my research, I'm primarily interested in *AI control protocols*, *chain-of-thought monitoring*, and *scheming evals*.
   - My previous work includes elements of game theory, multi-agent risks, corrigibility, and active learning.
 
-- I'm also a committee member of *OAISI*, the [Oxford AI Safety Initiative](oaisi.org); my priority is to build a welcoming, kind, and collaborative AI safety community here in Oxford.
+- I'm also a committee member of *OAISI*, the [Oxford AI Safety Initiative](https://oaisi.org); my priority is to build a welcoming, kind, and collaborative AI safety community here in Oxford.
   - [Please reach out](https://savvycal.com/oaisi/louis) if you want to talk about what AI safety is / what you might want to work on / how OAISI might be able to help you.
 
 - Aside from academic work, I'm pretty musical: I play bass in a couple bands, noodle on guitar and keys when writing my own music, and secretly would love to make a career out of playing music. Alternate career paths for me would also include teaching and doing outreach!
