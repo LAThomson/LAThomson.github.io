@@ -1,9 +1,13 @@
-window.onload = function() {
-    setInterval(function(){
-        var date = new Date();
-        var displayDate = date.toLocaleDateString();
-        var displayTime = date.toLocaleTimeString();
+(function () {
 
-        document.getElementById('clock').innerHTML = displayDate + " " + displayTime;
-    }, 1000);
-}
+  var clockElement = document.getElementById( "clock" );
+
+  function updateClock ( clock ) {
+    clock.innerHTML = new Date().toLocaleTimeString();
+  }
+
+  setInterval(function () {
+      updateClock( clockElement );
+  }, 1000);
+
+}());
