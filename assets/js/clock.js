@@ -1,4 +1,4 @@
-(function () {
+window.onload = function(){
     var clockElement = document.getElementById( "clock" );
 
     function updateClock ( clock ) {
@@ -13,5 +13,4 @@
     setInterval(function () {
         updateClock( clockElement );
     }, 1000);
-    
-}());
+}
