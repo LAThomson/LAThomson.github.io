@@ -1,15 +1,17 @@
 (function () {
+    var clockElement = document.getElementById( "clock" );
 
-  var clockElement = document.getElementById( "clock" );
+    function updateClock ( clock ) {
+        var date = new Date();
+        var displayDate = date.toLocaleDateString();
+        var displayTime = date.toLocaleTimeString();
+        clock.innerHTML = displayDate + " " + displayTime;
+    };
 
-  function updateClock ( clock ) {
-    clock.innerHTML = new Date().toLocaleTimeString();
-  };
+    updateClock( clockElement );
 
-  updateClock( clockElement );
-  
-  setInterval(function () {
-      updateClock( clockElement );
-  }, 1000);
-
+    setInterval(function () {
+        updateClock( clockElement );
+    }, 1000);
+    
 }());
