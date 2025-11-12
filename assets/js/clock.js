@@ -6,6 +6,8 @@
     clock.innerHTML = new Date().toLocaleTimeString();
   }
 
+  updateClock()
+  
   setInterval(function () {
       updateClock( clockElement );
   }, 1000);
