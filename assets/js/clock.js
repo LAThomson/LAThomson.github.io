@@ -4,6 +4,6 @@ window.onload = function() {
         var displayDate = date.toLocaleDateString();
         var displayTime = date.toLocaleTimeString();
 
-        document.getElementById('time').innerHTML = displayDate + " " + displayTime;
-    }, 1000); // 1000 milliseconds = 1 second
+        document.getElementById('clock').innerHTML = displayDate + " " + displayTime;
+    }, 1000);
 }
