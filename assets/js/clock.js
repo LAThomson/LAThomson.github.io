@@ -4,9 +4,9 @@
 
   function updateClock ( clock ) {
     clock.innerHTML = new Date().toLocaleTimeString();
-  }
+  };
 
-  updateClock()
+  updateClock( clockElement );
   
   setInterval(function () {
       updateClock( clockElement );
