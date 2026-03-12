@@ -9,31 +9,39 @@ title: Welcome!
 
 ## News
 
-- I've been **accepted onto MATS 9.0** to work with [\[Victoria Krakovna\]](https://vkrakovna.wordpress.com/) on scheming evaluations! I'll be working on this for January through March, and I'm looking forward to sharing more details on my work soon :)
+- I have been offered **MATS 9.1 extension funding** for six months to continue my work with [\[Victoria Krakovna\]](https://vkrakovna.wordpress.com/)!
+  - Over the course of the main programme (Jan-Mar), I've pivoted from thinking directly about evaluation awareness to building an automated scaffold for carrying out 'science of evals' work, which I plan to continue (and hopefully make use of!) in the extension programme.
 
-- I've been **awarded a nine-month grant** through UK AISI's [\[Alignment Project\]](https://alignmentproject.aisi.gov.uk/) to continue my work on agentic monitoring! I'll start working on this after MATS, collaborating with [\[Tyler Tracy\]](https://www.tylertracy.com/) and others at [\[Redwood Research\]](https://www.redwoodresearch.org/).
+- Alongside this, I will start the agentic monitoring project funded through UK AISI's [\[Alignment Project\]](https://alignmentproject.aisi.gov.uk/) grant, collaborating with [\[Tyler Tracy\]](https://www.tylertracy.com/) and others at [\[Redwood Research\]](https://www.redwoodresearch.org/).
+
+<!-- - I've been **accepted onto MATS 9.0** to work with [\[Victoria Krakovna\]](https://vkrakovna.wordpress.com/) on scheming evaluations! I'll be working on this for January through March, and I'm looking forward to sharing more details on my work soon :)
+
+- I've been **awarded a nine-month grant** through UK AISI's [\[Alignment Project\]](https://alignmentproject.aisi.gov.uk/) to continue my work on agentic monitoring! I'll start working on this after MATS, collaborating with [\[Tyler Tracy\]](https://www.tylertracy.com/) and others at [\[Redwood Research\]](https://www.redwoodresearch.org/). -->
 
 ------------------------
 
 ## About me
 
-- In my research, I'm primarily interested in *AI control protocols*, *chain-of-thought monitoring*, and *scheming evals*.
+- In my research, I have a broad range of interests, spanning the *science of evaluations*, *AI control protocols*, and *scheming models*.
   - My previous work includes elements of game theory, multi-agent risks, corrigibility, and active learning.
 
 - I'm also a committee member of *OAISI*, the [\[Oxford AI Safety Initiative\]](https://oaisi.org); my priority is to build a welcoming, kind, and collaborative AI safety community here in Oxford.
   - [\[Please reach out\]](https://savvycal.com/oaisi/louis) if you want to talk about what AI safety is / what you might want to work on / how OAISI might be able to help you.
 
-- Aside from academic work, I'm pretty musical: I play bass in a couple bands, noodle on guitar and keys when writing my own music, and secretly would love to make a career out of playing music. Alternate career paths for me would also include teaching and doing outreach!
+- Aside from academic work, I'm pretty musical: I play bass in a couple bands, noodle on guitar and keys (from when I used to write my own songs), and secretly would love to make a career out of playing music. Alternate career paths for me would also include teaching and doing outreach!
 
 - Some of my loves include \[video/board\] games and puzzles of all kinds, Japanese food (part of my heritage), continental philosophy, Arsenal FC (COYG), and most of all my lovely fiancée :\)
 
-Shoot me an email if you want to talk - I'm quick to respond and I enjoy talking to new people! Get in touch via [\[louis@cbthomson.com\]](mailto:louis@cbthomson.com)
+Shoot me an email if you want to talk - I'm (usually!) quick to respond and I enjoy talking to new people! Get in touch via [\[louis@cbthomson.com\]](mailto:louis@cbthomson.com)
 
 ------------------------
 
 ## My work
 
 *... in order of recency...*
+
+- **A Framework for Eval Awareness** *\[2026\]* (supervised by [\[Victoria Krakovna\]](https://vkrakovna.wordpress.com/))
+  - *Setting out a conceptual framework under which the key research directions in evaluation awareness can be delineated and understood.* This [\[blog post\]](https://www.lesswrong.com/posts/cjMpms3dBZJCrxL8c/a-framework-for-eval-awareness) was the result of the first three weeks of MATS 9.0, where I developed this framing to help me identify promising and neglected research directions for mitigating eval gaming.
 
 - **Agentic Monitoring for AI Control** *\[2025\]* (supervised by [\[Tyler Tracy\]](https://www.tylertracy.com/))
   - *An initial investigation into the extent to which trusted monitors benefit from opportunities to be agentic.* See my [\[blog post\]](https://www.lesswrong.com/posts/ptSXTkjnyj7KxNfMz/agentic-monitoring-for-ai-control-1) for an introduction to the research direction alongside some initial results and discussion.
