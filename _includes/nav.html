@@ -1,0 +1,15 @@
+{% assign nav_items = "Home,/|About,/about/|Research,/research/|Blog,/blog/" | split: "|" %}
+<nav class="site-nav">
+  <ul>
+    {% for item in nav_items %}
+      {% assign parts = item | split: "," %}
+      {% assign label = parts[0] %}
+      {% assign url = parts[1] %}
+      {% assign current = false %}
+      {% if page.url == url %}{% assign current = true %}{% endif %}
+      <li{% if current %} class="current"{% endif %}>
+        <a href="{{ url | relative_url }}">{{ label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
