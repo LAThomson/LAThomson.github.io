@@ -1,40 +1,47 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-UK" }}">
+<html lang="{{ site.lang | default: 'en-UK' }}">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme') || 'warm';
+        document.documentElement.classList.add('theme-' + t);
+      })();
+    </script>
 
-    {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <title>{% if page.title and page.title != site.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta property="og:title" content="{% if page.title and page.title != site.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
     {% include head-custom.html %}
+    <script src="{{ '/assets/js/theme-cycle.js' | relative_url }}" defer></script>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
-        <h3><span id="clock"><br></span></h3>
-
         {% if site.picture %}
-          <img src="{{ site.picture }}" alt="Picture of me from a couple years ago, when I had shorter hair and a light beard" />
+          <img src="{{ site.picture }}" alt="A headshot I had taken while participating in MATS 9.0" />
         {% endif %}
+
+        <h1><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></h1>
 
         <p>{{ site.description }}</p>
 
-        {% include sidebar-links.html %}
-
         {% include nav.html %}
+
+        {% include sidebar-links.html %}
       </header>
       <section>
-
-      {{ content }}
-
+        {{ content }}
       </section>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script src="/assets/js/clock.js"></script>
   </body>
 </html>

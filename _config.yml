@@ -1,7 +1,6 @@
-theme: jekyll-theme-minimal
 title: LAThomson
 description: Personal website of Louis Thomson — technical AI safety researcher.
 
-picture: /assets/img/profile_picture.jpg
+picture: /assets/img/profile_picture.png
 
 permalink: /blog/:slug/
