@@ -8,7 +8,7 @@ permalink: /about/
 
 In my research, I have a broad range of interests, spanning the *science of evaluations*, *AI control protocols*, and *scheming models*.
 
-My previous work includes elements of game theory, multi-agent risks, corrigibility, and active learning.
+My previous research work, much of which was done during/alongside my Master's in CS and Philosophy, touches on game theory, multi-agent risks, corrigibility, and active learning.
 {:.detail}
 
 I'm also a committee member of *OAISI*, the [\[Oxford AI Safety Initiative\]](https://oaisi.org); my priority is to build a welcoming, kind, and collaborative AI safety community here in Oxford.
@@ -18,6 +18,6 @@ I'm also a committee member of *OAISI*, the [\[Oxford AI Safety Initiative\]](ht
 
 Aside from academic work, I'm pretty musical: I play bass in a couple bands, noodle on guitar and keys (from when I used to write my own songs), and secretly would love to make a career out of playing music. Alternate career paths for me would also include teaching and doing outreach!
 
-Some of my loves include \[video/board\] games and puzzles of all kinds, Japanese food (part of my heritage), continental philosophy, Arsenal FC (COYG), and most of all my lovely fiancée :\)
+Some of my loves include \[video/board\] games and puzzles of all kinds, Japanese food (part of my heritage), continental philosophy, <span class="coyg-trophy">Arsenal FC</span>, and most of all my lovely fiancée :\)
 
 Shoot me an email if you want to talk - I'm (usually!) quick to respond and I enjoy talking to new people! Get in touch via [\[louis@cbthomson.com\]](mailto:louis@cbthomson.com)

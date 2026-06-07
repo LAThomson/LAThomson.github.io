@@ -19,22 +19,22 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure {
   --code-bg: rgba(0, 0, 0, 0.05);
 }
 
-html.theme-cool {
-  --bg: #E5E9ED;
-  --text: #252830;
-  --muted: #727682;
-  --accent: #6B7B3F;
-  --accent-secondary: #3E658B;
-  --rule: rgba(0, 0, 0, 0.08);
-  --code-bg: rgba(0, 0, 0, 0.05);
+html.theme-forest {
+  --bg: #1F2E28;
+  --text: #E8E4D6;
+  --muted: #989284;
+  --accent: #BCA85A;
+  --accent-secondary: #C28860;
+  --rule: rgba(255, 255, 255, 0.1);
+  --code-bg: rgba(255, 255, 255, 0.06);
 }
 
-html.theme-dusk {
-  --bg: #3D2E36;
+html.theme-espresso {
+  --bg: #2A1F18;
   --text: #EFE5CE;
-  --muted: #A89C8E;
-  --accent: #B6C47C;
-  --accent-secondary: #C5A6CC;
+  --muted: #998D7C;
+  --accent: #C99A1B;
+  --accent-secondary: #B26F4F;
   --rule: rgba(255, 255, 255, 0.1);
   --code-bg: rgba(255, 255, 255, 0.06);
 }
@@ -47,8 +47,17 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
   overflow-x: clip;
+}
+
+/* While the theme is changing (class added by JS for ~750ms), color
+   transitions on the small sidebar/text elements are slowed to match
+   the body's 0.7s. Outside of theme changes, their normal snappy
+   hovers (0.2s) are preserved. */
+html.theme-transitioning a,
+html.theme-transitioning header > p {
+  transition: color 0.7s ease-in-out;
 }
 
 h1, h2, h3, h4 {
@@ -248,21 +257,30 @@ section {
   color: var(--muted);
   font-size: 0.94rem;
 }
-.project-image {
+/* Generic zoomable image — click to open in the lightbox.
+   Per-context presentation (e.g. the framed research card) layers on
+   via parent selectors below. */
+.zoomable {
+  display: block;
+  cursor: zoom-in;
+  border-radius: 4px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.zoomable:hover {
+  transform: translateY(-1px);
+}
+
+/* Research cards: framed preview with fixed dimensions */
+.project .zoomable {
   width: 280px;
   height: 210px;
   object-fit: contain;
-  display: block;
-  border-radius: 4px;
   background: var(--code-bg);
   border: 1px solid var(--rule);
   padding: 6px;
-  cursor: zoom-in;
   justify-self: center;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-.project-image:hover {
-  transform: translateY(-1px);
+.project .zoomable:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -275,7 +293,7 @@ section {
   grid-row: 1;
   text-align: right;
 }
-.project:nth-of-type(even) .project-image {
+.project:nth-of-type(even) .zoomable {
   grid-column: 1;
   grid-row: 1;
 }
@@ -286,12 +304,12 @@ section {
     grid-template-columns: 1fr;
   }
   .project:nth-of-type(even) .project-content,
-  .project:nth-of-type(even) .project-image {
+  .project:nth-of-type(even) .zoomable {
     grid-column: auto;
     grid-row: auto;
     text-align: left;
   }
-  .project-image {
+  .project .zoomable {
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
@@ -315,13 +333,36 @@ section {
   transition: opacity 0.18s ease;
 }
 .lightbox.is-open { opacity: 1; }
-.lightbox img {
+.lightbox figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
   max-width: 100%;
   max-height: 100%;
+}
+.lightbox img {
+  max-width: 100%;
+  min-height: 0;
+  flex: 0 1 auto;
   border-radius: 4px;
   background: var(--bg);
   padding: 8px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+.lightbox figcaption {
+  flex: 0 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 720px;
+  padding: 0 1rem;
+  line-height: 1.4;
+}
+@media (max-width: 760px) {
+  .lightbox figcaption { font-size: 0.92rem; }
 }
 
 /* Post-specific */
@@ -332,6 +373,86 @@ section {
   margin-bottom: 1.5rem;
 }
 .post-back { margin-top: 2.5rem; }
+
+/* Blog post images: themed double-frame + size/placement utilities.
+   The frame uses --accent (olive) inside and --accent-secondary (grape)
+   outside, separated by a --bg-coloured gap, so it reads as two thin
+   rings and re-tints automatically when the theme cycles. */
+.post img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.25em auto 1.75em;
+  border-radius: 2px;
+  box-shadow:
+    0 0 0 2px var(--accent),
+    0 0 0 5px var(--bg),
+    0 0 0 7px var(--accent-secondary);
+  transition: box-shadow 0.3s ease, transform 0.15s ease;
+}
+
+/* Zoomable post images: on hover, the themed rings interpolate
+   down to a single soft drop shadow — visually, the double frame
+   shrinks behind the image as it lifts. */
+.post img.zoomable:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Size utilities — apply with kramdown IAL, e.g. ![alt](path){:.img-small} */
+.post img.img-tiny   { max-width: 240px; }
+.post img.img-small  { max-width: 340px; }
+.post img.img-medium { max-width: 420px; }
+.post img.img-large  { width: 100%; max-width: 100%; }
+
+/* Placement utilities */
+.post img.img-left  { float: left;  margin: 0.5em 1.75em 0.5em 0; }
+.post img.img-right { float: right; margin: 0.5em 0 0.5em 1.75em; }
+
+/* Captioned figures share the same frame on the image */
+.post figure { margin: 1.25em auto 1.75em; }
+.post figure img { margin: 0 auto 0.5em; }
+.post figcaption {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* COYG easter egg — trophy cursor on hover */
+.coyg-trophy {
+  cursor: url("/assets/img/trophy.svg") 14 14, default;
+}
+
+/* "clues" easter egg — magnifying-glass cursor on hover */
+.clues-magnifier {
+  cursor: url("/assets/img/magnifying-glass.svg") 11 11, default;
+}
+
+/* Clock easter egg — bg-coloured icon next to the title, toggles a live clock */
+.clock-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 0.45em;
+  cursor: pointer;
+  color: var(--bg);
+  vertical-align: middle;
+  transition: color 0.7s ease-in-out;
+}
+.clock-toggle:hover,
+.clock-toggle:focus-visible {
+  color: var(--muted);
+  outline: none;
+}
+.clock-toggle svg { display: block; }
+.clock-display {
+  font-family: 'Courier New', Consolas, monospace;
+  font-size: 0.95rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  margin: 0.1rem 0 0.35rem;
+  transition: color 0.7s ease-in-out;
+}
+.clock-display[hidden] { display: none; }
 
 /* Mobile */
 @media (max-width: 760px) {

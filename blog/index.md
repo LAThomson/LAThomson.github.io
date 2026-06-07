@@ -8,7 +8,10 @@ permalink: /blog/
 
 {% for post in site.posts %}
 - **[{{ post.title }}]({{ post.url | relative_url }})** *({{ post.date | date: "%-d %B %Y" }})*
-  - {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
+  
+  {{ post.excerpt | strip_html | strip_newlines | truncatewords: 30 }}
+  {:.detail}
+ 
 {% else %}
 *No posts yet — check back soon.*
 {% endfor %}

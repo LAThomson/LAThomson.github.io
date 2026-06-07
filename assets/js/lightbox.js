@@ -1,14 +1,22 @@
 (function () {
-  // Lightweight click-to-zoom for any <img class="project-image">.
-  // No dependencies; click outside the image or press Esc to close.
+  // Lightweight click-to-zoom for any <img class="zoomable">.
+  // Caption priority: data-caption → alt → (no caption rendered).
+  // Click outside the image or press Esc to close.
 
-  function open(src, alt) {
+  function open(src, alt, caption) {
     var overlay = document.createElement('div');
     overlay.className = 'lightbox';
+    var figure = document.createElement('figure');
     var img = document.createElement('img');
     img.src = src;
     img.alt = alt || '';
-    overlay.appendChild(img);
+    figure.appendChild(img);
+    if (caption) {
+      var fc = document.createElement('figcaption');
+      fc.textContent = caption;
+      figure.appendChild(fc);
+    }
+    overlay.appendChild(figure);
     document.body.appendChild(overlay);
     // Force a reflow so the opacity transition fires.
     void overlay.offsetWidth;
@@ -32,9 +40,10 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('img.project-image').forEach(function (img) {
+    document.querySelectorAll('img.zoomable').forEach(function (img) {
       img.addEventListener('click', function () {
-        open(img.getAttribute('src'), img.getAttribute('alt'));
+        var caption = img.getAttribute('data-caption') || img.getAttribute('alt');
+        open(img.getAttribute('src'), img.getAttribute('alt'), caption);
       });
     });
   });
