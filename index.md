@@ -11,7 +11,8 @@ title: Welcome!
 
 - I am currently doing **MATS 9.1**, extending my main programme work with [\[Victoria Krakovna\]](https://vkrakovna.wordpress.com/) until October.
   - Over the course of the main programme (Jan-Mar), I pivoted from thinking directly about evaluation awareness to building an automated scaffold for carrying out 'science of evals' work.
-  - I've now completed the first release version of the scaffold, so I'll be (a) applying it myself to generate novel research insights; and (b) further developing it in response to feedback from other frontier researchers (at GDM, Apollo, UK AISI, and MATS).
+  - I've finished the first version of the scaffold, which I've called **Prism**: see [\[here\]](https://www.lesswrong.com/posts/wq5PfGiHvnx6XipDi/prism-automating-science-of-evals-research) for the blog post and [\[here\]](https://github.com/LAThomson/prism) for the codebase!
+  - I'm now extending the scaffold to carry out [\[Model Forensics\]](https://www.lesswrong.com/posts/LCGcD28rSMkMTMvBK/the-case-for-model-forensics) research, hopefully finishing by the end of September.
 
 - I have also accepted a fully-funded offer to begin the [\[AIMS CDT\]](https://aims.robots.ox.ac.uk/) DPhil programme in Oxford from October!
   - The first year of the programme is dedicated to learning, reading widely, and carrying out mini-projects, after which I will decide on a supervisor for the rest of the DPhil.

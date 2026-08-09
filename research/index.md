@@ -17,7 +17,7 @@ permalink: /research/
 
 *An agent scaffold designed to automate science-of-evals research work.*
 
-This scaffold, built on top of [\[Inspect AI\]](https://inspect.aisi.org.uk/), [\[Claude Code\]](https://claude.com/product/claude-code), and the [\[Claude Agent SDK\]](https://docs.anthropic.com/en/docs/agents/claude-agent-sdk), is designed to automate work on understanding eval dynamics and explaining model behaviours with respect to their environment.
+This scaffold, built on top of Claude Code, is designed to automate work on understanding eval dynamics and identifying confounding factors. I'm currently extending it to carry out Model Forensics work too: explaining model behaviours with respect to their environment. See the [\[blog post\]](https://www.lesswrong.com/posts/wq5PfGiHvnx6XipDi/prism-automating-science-of-evals-research) for a case study, or the [\[codebase\]](https://github.com/LAThomson/prism) to use it yourself!
 {:.detail}
 
 </div>
