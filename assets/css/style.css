@@ -232,6 +232,11 @@ section {
   max-width: 720px;
 }
 
+/* Homepage news list — a little air between the top-level items so the
+   separate news entries read as distinct. The child combinator keeps
+   nested sub-points tight against the item they belong to. */
+.news > li + li { margin-top: 0.75rem; }
+
 /* Sub-detail paragraphs (used on About) */
 .detail {
   margin-top: -0.5rem;
