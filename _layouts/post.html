@@ -3,6 +3,13 @@ layout: default
 ---
 
 <article class="post">
+  <nav class="post-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li aria-current="page">{{ page.title }}</li>
+    </ol>
+  </nav>
+
   <h2 class="post-title">{{ page.title }}</h2>
   <p class="post-date">
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>

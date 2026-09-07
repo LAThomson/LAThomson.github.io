@@ -365,7 +365,95 @@ section {
   .lightbox figcaption { font-size: 0.92rem; }
 }
 
+/* Blog index entries — each post gets its own heading rather than a
+   bullet, mirroring the .project cards on Research (h3 + muted meta
+   line + .detail excerpt) but without the image column. */
+.post-entry { margin-bottom: 2rem; }
+
+/* The h3s carry no top margin, so the first entry would otherwise sit
+   only 0.75rem under the "Blog" h2 — far tighter than the 2rem between
+   entries. Nudge it down so the heading isn't crowded. */
+.post-entry:first-of-type { margin-top: 1rem; }
+.post-entry h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+/* Accent carries the link, as elsewhere on the site; the underline is
+   held back for hover so the title reads as a heading at rest. */
+.post-entry h3 a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.post-entry h3 a:hover,
+.post-entry h3 a:focus-visible {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+.post-entry-meta {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* .detail's negative top margin is tuned for prose on About/Research,
+   where it hugs the paragraph above; here the meta line already sets
+   the spacing, so neutralise it. */
+.post-entry .detail {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* Post-specific */
+
+/* Breadcrumb above the post title — an immediate escape back to the
+   blog index. It earns its keep most on mobile, where the sticky
+   sidebar nav is static and has scrolled out of view by the time a
+   reader wants to leave. Separators are drawn with ::before so they
+   stay out of the accessibility tree: a screen reader hears
+   "Blog, <post title>" rather than a mouthful of slashes. */
+.post-breadcrumb {
+  font-size: 0.92rem;
+  margin-bottom: 0.6rem;
+}
+.post-breadcrumb ol {
+  display: flex;
+  align-items: baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.post-breadcrumb li:first-child { flex: none; }
+.post-breadcrumb li + li::before {
+  content: '\2044';  /* fraction slash — lighter than a solidus */
+  color: var(--muted);
+  margin: 0 0.5em;
+}
+
+/* Matches .site-nav's chrome-like treatment: colour carries the link,
+   with the underline held back for hover. */
+.post-breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.post-breadcrumb a:hover,
+.post-breadcrumb a:focus-visible {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+/* The current crumb repeats the <h2> directly below it, so it never
+   earns a second line — truncate rather than wrap. */
+.post-breadcrumb li[aria-current] {
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
 .post-title { margin-top: 0; }
 .post-date {
   color: var(--muted);
